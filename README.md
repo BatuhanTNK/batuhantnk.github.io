@@ -4,15 +4,15 @@ Bu proje, Batuhan Tonk'un yeteneklerini, projelerini ve deneyimlerini sergileyen
 
 ## 🚀 Proje Hakkında
 
-Tamamen HTML, CSS ve Vanilla JavaScript kullanılarak geliştirilmiş, animasyonlu ve etkileşimli bir arayüze sahiptir. Koyu tema (Dark Mode) destekli olup kullanıcı dostu bir tasarıma odaklanılmıştır.
+Tamamen HTML, CSS ve Vanilla JavaScript kullanılarak geliştirilmiş, proje odaklı bir arayüze sahiptir. Açık/koyu tema ilk açılışta sistem tercihini izler.
 
 ### 🌟 Özellikler
 
 - **Responsive Tasarım**: Mobil, tablet ve masaüstü cihazlarla tam uyumlu.
 - **Dinamik Tema**: Kullanıcı tercihine göre renk temasını değiştirme özelliği (açık/koyu tema).
 - **Formspree Entegrasyonu**: Çalışan bir iletişim formu altyapısı.
-- **Scroll Animasyonları**: Pürüzsüz geçişler ve elementlerin görünürlüğüne bağlı animasyonlar.
-- **Modern Arayüz**: Glassmorphism ve gradient animasyon efektleri.
+- **Erişilebilirlik**: Klavye odağı, içeriğe geç bağlantısı, azaltılmış hareket desteği ve görünür form etiketleri.
+- **Proje Odaklı Tasarım**: Seçili çalışmalar, tipografik proje kapakları ve sade içerik hiyerarşisi.
 
 ### 🛠️ Kullanılan Teknolojiler
 
@@ -20,7 +20,7 @@ Tamamen HTML, CSS ve Vanilla JavaScript kullanılarak geliştirilmiş, animasyon
 - CSS3 (Vanilla / CSS Değişkenleri)
 - JavaScript (ES6+)
 - FontAwesome (İkonlar)
-- Google Fonts (Inter ve JetBrains Mono)
+- Google Fonts (Bricolage Grotesque ve Manrope)
 
 ## 📁 Proje Yapısı
 
@@ -37,3 +37,9 @@ MyWebSite/
 Bu repoya `main` branch'ine push yaptığınızda site otomatik olarak canlıya alınır:
 GitHub Webhook → `hook.batutnk.com.tr` → sunucuda `git pull` → Caddy `batutnk.com.tr` üzerinden servis.
 
+
+## Yerel önizleme
+
+Proje klasöründe `python -m http.server 4173 --bind 127.0.0.1` çalıştırıp `http://127.0.0.1:4173` adresini açın.
+
+Tasarım kuralları `DESIGN.md`, ürün bağlamı `PRODUCT.md`, değerlendirme ve doğrulamalar `DESIGN-REVIEW.md` içindedir.

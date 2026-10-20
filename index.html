@@ -1,30 +1,38 @@
 <!DOCTYPE html>
-<html lang="tr" data-theme="dark">
+<html lang="tr" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Batuhan Tonk — Full Stack & Mobil Uygulama Geliştirici</title>
-    <link rel="icon" type="image/svg+xml" href="image/favicon.svg?v=1">
-    <link rel="icon" type="image/png" href="image/favicon.png?v=3">
+    <link rel="icon" type="image/svg+xml" href="image/favicon.svg?v=5">
+    <meta name="theme-color" content="#f6f4ee">
+    <script>
+        try {
+            const saved = localStorage.getItem('theme');
+            document.documentElement.dataset.theme = saved === 'dark' || saved === 'light'
+                ? saved : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        } catch (_) {}
+    </script>
     <meta name="description"
         content="Batuhan Tonk'un kişisel portfolyo sitesi. Full Stack Yazılım Geliştirici, React, React Native, JavaScript, TypeScript ve modern web teknolojileri uzmanı.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=7">
 </head>
 
 <body>
 
+    <a class="skip-link" href="#app" id="skipLink">İçeriğe geç</a>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="nav-logo" id="navLogo">
-                <span class="logo-bracket">&lt;</span>BT<span class="logo-bracket">/&gt;</span>
+                <span class="logo-mark" aria-hidden="true">bt.</span><span>Batuhan Tonk</span>
             </a>
             <ul class="nav-menu" id="navMenu">
                 <!-- Nav links rendered dynamically -->
@@ -38,7 +46,7 @@
                 <button class="theme-toggle" id="themeToggle" aria-label="Tema Değiştir">
                     <i class="fas fa-moon" id="themeIcon"></i>
                 </button>
-                <button class="hamburger" id="hamburger" aria-label="Menü">
+                <button class="hamburger" id="hamburger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="navMenu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -48,28 +56,28 @@
     </nav>
 
     <!-- SPA App Container -->
-    <main id="app"></main>
+    <main id="app" tabindex="-1"></main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <span class="logo-bracket">&lt;</span>BT<span class="logo-bracket">/&gt;</span>
+                    Batuhan Tonk<span class="logo-period">.</span>
                 </div>
                 <p class="footer-text" id="footerText">Tasarım & Geliştirme — Batuhan Tonk © 2026</p>
                 <div class="footer-links">
-                    <a href="https://linkedin.com/in/batuhan-tonk-3b520a315" target="_blank"><i
+                    <a href="https://linkedin.com/in/batuhan-tonk-3b520a315" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
                             class="fab fa-linkedin-in"></i></a>
-                    <a href="https://github.com/BatuhanTNK" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://mail.google.com/mail/?view=cm&to=batuhan.tonk.1@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/BatuhanTNK" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+                    <a href="mailto:batuhan.tonk.1@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="i18n.js?v=4"></script>
-    <script src="script.js?v=4"></script>
+    <script src="i18n.js?v=7"></script>
+    <script src="script.js?v=7"></script>
 </body>
 
 </html>

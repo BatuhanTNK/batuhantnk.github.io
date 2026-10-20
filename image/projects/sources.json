@@ -1,0 +1,38 @@
+{
+  "captured": "2026-10-20",
+  "notes": "Screenshots from existing local projects. Within web_mobil only click count and promtweb were accessed. The QR project header source was subsequently fixed at the user's request, rebuilt, and recaptured; other original projects were not modified.",
+  "images": [
+    {
+      "file": "gameskinai.jpg",
+      "source": "web_mobil/promtweb/build",
+      "method": "Fresh browser capture of existing local web build"
+    },
+    {
+      "file": "click-count.png",
+      "source": "web_mobil/click count/click-and-count/docs/apk-small-arm64-check.png",
+      "method": "Existing Android test screenshot, copied without retouching"
+    },
+    {
+      "file": "falyeri.png",
+      "source": "falyeri-main/docs/manual-test-evidence/daily-card-persisted.png",
+      "method": "Existing application test screenshot, copied without retouching"
+    },
+    {
+      "file": "ilan-asistani.jpg",
+      "source": "metin_asistanı/ilan-metni-asistani/.next/server/app/index.html",
+      "method": "Fresh browser capture of the existing prerendered homepage"
+    },
+    {
+      "file": "qr-platform.jpg",
+      "source": "qrCodeProject-main/qr_code/frontend/build",
+      "method": "Fresh browser capture of rebuilt local web app after the header layout fix",
+      "updated": "2026-10-20",
+      "version": "header-v2"
+    },
+    {
+      "file": "nqc.jpg",
+      "source": "NQC/index.html",
+      "method": "Fresh browser capture of local static homepage"
+    }
+  ]
+}

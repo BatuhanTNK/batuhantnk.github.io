@@ -31,31 +31,28 @@ const translations = {
       anasayfa: "Ana Sayfa",
       hakkimda: "Hakkımda",
       yetenekler: "Yetenekler",
-      deneyimler: "Deneyimler",
+      deneyimler: "Projeler",
       sertifikalar: "Sertifikalar",
       iletisim: "İletişim"
     },
 
-    // Hero
+    // Home
     hero: {
       badge: "Full Stack & Mobil Geliştirici",
-      titleLine1: "Merhaba, ben",
-      titleLine2: "Batuhan Tonk",
-      description: `React ve React Native kullanarak web ve mobil platformlarda fikirlerinizi hayata geçiren serbest çalışan (freelance) bir <strong>Full Stack ve Mobil Yazılım Geliştiriciyim</strong>. Yapay zeka entegrasyonları, modern arayüzler ve güçlü backend çözümleriyle uçtan uca profesyonel hizmet sunuyorum. Yeni proje ve iş birliklerine açığım!`,
-      ctaPrimary: "Projelerimi İncele",
-      ctaSecondary: "Benimle İletişime Geç",
-      stats: [
-        { number: "5+", label: "Proje" },
-        { number: "3+", label: "Teknoloji Alanı" },
-        { number: "2+", label: "Sertifika" }
-      ],
-      codeLines: {
-        name: '"Batuhan Tonk"',
-        role: '"Full Stack Dev"',
-        skills: ['"React"', '"React Native"', '"TypeScript"', '"Node.js"', '"PostgreSQL"'],
-        passion: '"AI & Innovation"'
-      },
-      scrollText: "Aşağı Kaydır"
+      titleLine1: "Fikirden",
+      titleLine2: "çalışan ürüne.",
+      description: "React ve React Native ile web ve mobil uygulamalar geliştiriyorum. Arayüzden backend'e, AI entegrasyonlarından veri tabanına kadar ürünün bütününü ele alıyorum.",
+      ctaPrimary: "Tüm çalışmalar",
+      ctaSecondary: "Birlikte çalışalım",
+      availability: "Yeni proje ve iş birliklerine açığım",
+      selectedTitle: "Seçili çalışmalar",
+      aboutTitle: "Arayüzün ötesinde.",
+      aboutText: "Yazılım mühendisliği eğitimimi React ekosistemiyle birleştiriyorum. Web ve mobil uygulamalarda arayüz, API ve veri katmanlarının birlikte çalışmasına odaklanıyorum.",
+      aboutLink: "Beni daha yakından tanıyın",
+      practiceTitle: "Uçtan uca geliştirme",
+      practiceText: "Bir ekranın görünümünün yanında, arkasındaki veri akışını ve farklı platformlarda nasıl çalışacağını da düşünüyorum.",
+      integrationLabel: "AI & API entegrasyonları",
+      skillsLink: "Teknolojileri inceleyin"
     },
 
     // About
@@ -86,18 +83,21 @@ const translations = {
             { icon: "fab fa-js", label: "JavaScript (ES6+)", color: "yellow" },
             { icon: "fab fa-js", label: "TypeScript (TSX)", color: "blue" },
             { icon: "fab fa-java", label: "Java", color: "red" },
+            { icon: "fas fa-code", label: "Kotlin", color: "orange" },
             { icon: "fab fa-html5", label: "HTML", color: "orange" },
             { icon: "fab fa-css3-alt", label: "CSS", color: "purple" }
           ]
         },
         {
           icon: "fas fa-layer-group",
-          title: "React Ekosistemi & Full Stack",
-          description: "React ile modern web uygulamaları, React Native ile cross-platform mobil projeler geliştiriyorum.",
+          title: "Web & Mobil Geliştirme",
+          description: "React ve Next.js ile web; React Native, Expo ve Kotlin / Jetpack Compose ile mobil uygulamalar geliştiriyorum.",
           tags: [
             { icon: "fab fa-react", label: "React", color: "cyan" },
             { icon: "fab fa-react", label: "React Native", color: "cyan" },
-            { icon: "fab fa-react", label: "React Hooks", color: "cyan" },
+            { icon: "fab fa-react", label: "Next.js", color: "cyan" },
+            { icon: "fab fa-android", label: "Jetpack Compose", color: "green" },
+            { icon: "fab fa-react", label: "Expo", color: "cyan" },
             { icon: "fab fa-node-js", label: "Node.js", color: "green" }
           ]
         },
@@ -106,7 +106,9 @@ const translations = {
           title: "Veri Tabanı",
           tags: [
             { icon: "fas fa-database", label: "MySQL", color: "blue" },
-            { icon: "fas fa-database", label: "PostgreSQL", color: "indigo" }
+            { icon: "fas fa-database", label: "PostgreSQL", color: "indigo" },
+            { icon: "fas fa-database", label: "Supabase", color: "green" },
+            { icon: "fas fa-fire", label: "Firebase", color: "orange" }
           ]
         },
         {
@@ -114,7 +116,7 @@ const translations = {
           title: "Yapay Zeka & API Entegrasyonu",
           description: "AI servislerini projelere entegre ederek konseptten production-ready ürünlere dönüştürüyorum.",
           tags: [
-            { icon: "fas fa-brain", label: "fal.ai (AI API)", color: "purple" },
+            { icon: "fas fa-brain", label: "Gemini API", color: "green" },
             { icon: "fas fa-exchange-alt", label: "REST API", color: "green" },
             { icon: "fab fa-google", label: "Google API'ları", color: "red" }
           ]
@@ -146,7 +148,7 @@ const translations = {
     // Experience
     experience: {
       tag: "Deneyimler",
-      title: "Deneyimler & Projeler",
+      title: "Projeler & Deneyim",
       items: [
         {
           icon: "fas fa-qrcode",
@@ -169,30 +171,173 @@ const translations = {
           tech: ["React Native", "AR", "Maps API", "React Hooks"]
         }
       ],
-      projectsHeader: "Açık Kaynak Projeler",
-      projectsSub: "GitHub profilimden seçkin projeler",
-      projects: [
-        { href: "https://github.com/BatuhanTNK/GameSkinAI", icon: "fas fa-gamepad", title: "GameSkinAI", desc: "Yapay zeka destekli oyun skin/personelleştirme platformu (React + Horizon UI)", lang: "JavaScript", langIcon: "fab fa-js" },
-        { href: "https://github.com/BatuhanTNK/time_thief", icon: "fas fa-stopwatch", title: "time_thief (Chronos)", desc: "Backendless, oyun bazlı görev sistemi: günlük spin, streak ve achievement", lang: "TypeScript", langIcon: "fab fa-js" },
-        { href: "https://github.com/BatuhanTNK/click_count-", icon: "fas fa-mouse-pointer", title: "click_count", desc: "Kategoriler, timer, hatırlatıcı, şablon ve Android widget içeren sayaç app", lang: "TypeScript", langIcon: "fab fa-js" },
-        { href: "https://github.com/BatuhanTNK/chatbot_uygulama-main-server", icon: "fas fa-robot", title: "Chatbot Uygulaması", desc: "Supabase + Mistral AI + Gmail entegrasyonlu chatbot & memnuniyet anket sistemi", lang: "Node.js", langIcon: "fab fa-node-js" }
-      ],
-      archivedHeader: "Diğer Projeler (Arşiv)",
-      archivedSub: "Erken dönem ve eğitim amaçlı çalışmalar",
-      archivedProjects: [
-        { href: "https://github.com/BatuhanTNK/VTO_proje_Viro", icon: "fas fa-camera", title: "VTO_proje_Viro", desc: "Virtual Try-On (Sanal Deneme) projesi", lang: "TypeScript", langIcon: "fab fa-js" },
-        { href: "https://github.com/BatuhanTNK", icon: "fas fa-robot", title: "AI_Wep_Interface", desc: "Yapay zeka tabanlı web arayüzü projesi", lang: "TypeScript", langIcon: "fab fa-js" },
-        { href: "https://github.com/BatuhanTNK", icon: "fas fa-map-marked-alt", title: "ArView_Map", desc: "Artırılmış gerçeklik harita uygulaması", lang: "JavaScript", langIcon: "fab fa-js" },
-        { href: "https://github.com/BatuhanTNK", icon: "fas fa-brain", title: "Yas_Tahmini_Py", desc: "Yapay zeka ile yaş tahmini projesi", lang: "Python", langIcon: "fab fa-python" },
-        { href: "https://github.com/BatuhanTNK", icon: "fas fa-blog", title: "Ki-sisel-Blog-Web-Site", desc: "Kişisel blog web sitesi", lang: "HTML/CSS/JS", langIcon: "fab fa-html5" }
-      ]
+        "projectsHeader": "Geliştirdiğim projeler",
+        "projectsSub": "Web, mobil ve yapay zeka projelerinden gerçek ekranlar.",
+        "experienceHeading": "Deneyim",
+        "imageLabel": "Ekran görüntüsünü aç",
+        "codeLabel": "Kodu incele",
+        "siteLabel": "Siteyi aç",
+        "screenshotLabel": "Uygulama ekranı",
+        "projects": [
+          {
+            "id": "gameskinai",
+            "title": "GameSkinAI",
+            "kind": "AI destekli web uygulaması",
+            "desc": "Fotoğraf veya karakter konseptini seçilen oyun stiline göre dönüştüren bir AI platformu. Karakter görseli ve prompt üretimini; üretim geçmişi, prompt kütüphanesi ve topluluk galerisiyle bir araya getirir.",
+            "features": [
+              "Fotoğraf ve konseptten oyun stili dönüşümü",
+              "Prompt kütüphanesi, geçmiş ve topluluk galerisi",
+              "Supabase ile oturum ve veri yönetimi"
+            ],
+            "tech": [
+              "React",
+              "Vite",
+              "Tailwind CSS",
+              "Supabase",
+              "Gemini"
+            ],
+            "href": "https://github.com/BatuhanTNK/GameSkinAI",
+            "image": "image/projects/gameskinai.jpg",
+            "imageAlt": "GameSkinAI ana sayfası; karakter dönüşümü örneği ve prompt önizlemesi",
+            "format": "web",
+            "lang": "React · AI",
+            "langIcon": "fab fa-react",
+            "icon": "fas fa-gamepad"
+          },
+          {
+            "id": "click-count",
+            "title": "Click & Count",
+            "kind": "Mobil sayaç ve alışkanlık uygulaması",
+            "desc": "Manuel sayaç, geri sayım ve kronometre modlarını birleştiren React Native uygulaması. Kategoriler ve gruplar, hedefler, hatırlatıcılar ve kullanım istatistikleriyle günlük aktivitelerin takibini sağlar.",
+            "features": [
+              "Manuel sayaç, zamanlayıcı ve kronometre",
+              "Kategori, grup, hedef ve hatırlatıcılar",
+              "İstatistikler, günlük görevler ve başarımlar"
+            ],
+            "tech": [
+              "React Native",
+              "Expo",
+              "TypeScript",
+              "Zustand"
+            ],
+            "href": "https://github.com/BatuhanTNK/click_count-",
+            "image": "image/projects/click-count.png",
+            "imageAlt": "Click & Count uygulamasında sayaç istatistikleri, günlük hedef ve sayaç grupları",
+            "format": "mobile",
+            "lang": "React Native · Expo",
+            "langIcon": "fab fa-react",
+            "icon": "fas fa-hand-pointer"
+          },
+          {
+            "id": "falyeri",
+            "title": "Falyeri",
+            "kind": "Android · Eğlence ve astroloji",
+            "desc": "Kotlin ve Jetpack Compose ile geliştirilen, eğlence odaklı bir Android uygulaması. Tarot, kahve falı, rüya ve burç yorumlarını Gemini entegrasyonu, yorum geçmişi ve AI sohbetiyle bir araya getirir.",
+            "features": [
+              "Tarot, kahve, rüya ve burç yorumları",
+              "AI sohbeti ve geçmiş yorumlar",
+              "Firebase hesabı, günlük kart ve bildirimler"
+            ],
+            "tech": [
+              "Kotlin",
+              "Jetpack Compose",
+              "Firebase",
+              "Gemini",
+              "Room"
+            ],
+            "href": "https://github.com/BatuhanTNK/falyeri",
+            "image": "image/projects/falyeri.png",
+            "imageAlt": "Falyeri Android uygulamasının ana ekranında günlük tarot kartı ve giriş serisi",
+            "format": "mobile",
+            "lang": "Kotlin · Android",
+            "langIcon": "fab fa-android",
+            "icon": "fas fa-star"
+          },
+          {
+            "id": "ilan-asistani",
+            "title": "İlan Asistanı",
+            "kind": "AI destekli emlak metni üretimi",
+            "desc": "Mülk bilgilerini resmi, samimi ve sosyal medya tonlarında ilan metinlerine dönüştüren web uygulaması. Next.js arayüzünü Gemini ile metin üretimi, Supabase hesapları ve kaydedilen ilan geçmişiyle birleştirir.",
+            "features": [
+              "Mülk bilgilerinden üç farklı tonda ilan metni",
+              "Kaydedilen ilanlar ve metin düzenleme akışı",
+              "Supabase oturumları ve kullanım kotası"
+            ],
+            "tech": [
+              "Next.js",
+              "React",
+              "TypeScript",
+              "Supabase",
+              "Gemini",
+              "Tailwind CSS"
+            ],
+            "href": "https://github.com/BatuhanTNK/real-estate-assistant",
+            "image": "image/projects/ilan-asistani.jpg",
+            "imageAlt": "İlan Asistanı ana sayfası; üç farklı tonda emlak ilanı oluşturma tanıtımı",
+            "format": "web",
+            "lang": "Next.js · Gemini",
+            "langIcon": "fab fa-react",
+            "icon": "fas fa-house"
+          },
+          {
+            "id": "qr-platform",
+            "title": "Dinamik QR Kod Platformu",
+            "kind": "Full Stack · QR yönetimi",
+            "desc": "QR kod tasarımı, dinamik yönlendirme ve dijital kartvizit yönetimi için geliştirilen platform. CSV ile toplu üretim, tarama analitiği, kullanıcı paneli ve admin araçlarını React arayüzü ile Node.js API üzerinde toplar.",
+            "features": [
+              "Özelleştirilebilir QR tasarımı ve dinamik vCard",
+              "CSV ile toplu üretim ve tarama analitiği",
+              "Kullanıcı yönetimi ve admin paneli"
+            ],
+            "tech": [
+              "React",
+              "Node.js",
+              "Express",
+              "MySQL",
+              "Sequelize"
+            ],
+            "href": "https://github.com/BatuhanTNK/qr_cODE",
+            "image": "image/projects/qr-platform.jpg",
+            "imageVersion": "header-v2",
+            "imageAlt": "QR Kod Platformu ana sayfası; QR oluşturma, tarayıcı ve kullanıcı paneli bağlantıları",
+            "format": "web",
+            "lang": "React · Node.js",
+            "langIcon": "fab fa-node-js",
+            "icon": "fas fa-qrcode"
+          },
+          {
+            "id": "nqc",
+            "title": "NQC Bilişim",
+            "kind": "Kurumsal web sitesi",
+            "desc": "Yazılım hizmetlerini tanıtan, mobil uyumlu ve çok sayfalı kurumsal web sitesi. Hizmetler, hakkımızda ve iletişim sayfalarını; SEO meta verileri, yapılandırılmış veri ve doğrudan iletişim bağlantılarıyla sunar.",
+            "features": [
+              "Ana sayfa, hizmetler, hakkımızda ve iletişim",
+              "Mobil uyum, SEO ve yapılandırılmış veri",
+              "WhatsApp ve e-posta iletişim akışı"
+            ],
+            "tech": [
+              "HTML",
+              "CSS",
+              "JavaScript",
+              "Bootstrap"
+            ],
+            "href": "https://github.com/BatuhanTNK/NQC",
+            "site": "https://nqcbilisim.com.tr",
+            "image": "image/projects/nqc.jpg",
+            "imageAlt": "NQC Bilişim ana sayfası; web, mobil ve yazılım hizmetleri tanıtımı",
+            "format": "web",
+            "lang": "HTML · CSS · JavaScript",
+            "langIcon": "fab fa-html5",
+            "icon": "fas fa-globe"
+          }
+        ]
     },
 
     // CTA
     cta: {
-      title: "Bir Proje mi Planlıyorsunuz?",
-      description: "Fikirlerinizi gerçeğe dönüştürmek, React ile web veya mobil projelerinizde AI destekli çözümler üretmek için hazırım. Modern teknolojilerle yenilikçi çözümler üretelim.",
-      button: "Hemen İletişime Geçin"
+      title: "Bir sonraki projeniz?",
+      description: "Web, mobil veya AI entegrasyonu üzerine bir projeniz varsa detaylarını konuşalım.",
+      button: "Projeyi konuşalım"
     },
 
     // Certificates
@@ -233,8 +378,8 @@ const translations = {
       formMessage: "Mesajınız",
       formButton: "Mesaj Gönder",
       formSending: "Gönderiliyor...",
-      formSuccess: "Mesaj Gönderildi!",
-      formError: "Hata Oluştu!"
+      formSuccess: "Mesajınız gönderildi. İletişime geçtiğiniz için teşekkürler.",
+      formError: "Mesaj gönderilemedi. Tekrar deneyin veya e-posta ile ulaşın."
     },
 
     // Footer
@@ -275,31 +420,28 @@ const translations = {
       home: "Home",
       about: "About",
       skills: "Skills",
-      experience: "Experience",
+      experience: "Projects",
       certificates: "Certificates",
       contact: "Contact"
     },
 
-    // Hero
+    // Home
     hero: {
       badge: "Full Stack & Mobile Developer",
-      titleLine1: "Hi, I'm",
-      titleLine2: "Batuhan Tonk",
-      description: `I'm a freelance <strong>Full Stack & Mobile Developer</strong> who brings your ideas to life on web and mobile platforms using React and React Native. I provide end-to-end professional services with AI integrations, modern interfaces, and robust backend solutions. Open to new projects and collaborations!`,
-      ctaPrimary: "View My Projects",
-      ctaSecondary: "Get In Touch",
-      stats: [
-        { number: "5+", label: "Projects" },
-        { number: "3+", label: "Tech Domains" },
-        { number: "2+", label: "Certificates" }
-      ],
-      codeLines: {
-        name: '"Batuhan Tonk"',
-        role: '"Full Stack Dev"',
-        skills: ['"React"', '"React Native"', '"TypeScript"', '"Node.js"', '"PostgreSQL"'],
-        passion: '"AI & Innovation"'
-      },
-      scrollText: "Scroll Down"
+      titleLine1: "From an idea",
+      titleLine2: "to a working product.",
+      description: "I build web and mobile applications with React and React Native. From interfaces and backends to AI integrations and databases, I work across the whole product.",
+      ctaPrimary: "All work",
+      ctaSecondary: "Let's work together",
+      availability: "Open to new projects and collaborations",
+      selectedTitle: "Selected work",
+      aboutTitle: "Beyond the interface.",
+      aboutText: "I combine my software engineering background with the React ecosystem, focusing on how interfaces, APIs, and data work together across web and mobile applications.",
+      aboutLink: "A little more about me",
+      practiceTitle: "End-to-end development",
+      practiceText: "Alongside how a screen looks, I consider the data behind it and how it works across different platforms.",
+      integrationLabel: "AI & API integrations",
+      skillsLink: "Explore the technologies"
     },
 
     // About
@@ -330,18 +472,21 @@ const translations = {
             { icon: "fab fa-js", label: "JavaScript (ES6+)", color: "yellow" },
             { icon: "fab fa-js", label: "TypeScript (TSX)", color: "blue" },
             { icon: "fab fa-java", label: "Java", color: "red" },
+            { icon: "fas fa-code", label: "Kotlin", color: "orange" },
             { icon: "fab fa-html5", label: "HTML", color: "orange" },
             { icon: "fab fa-css3-alt", label: "CSS", color: "purple" }
           ]
         },
         {
           icon: "fas fa-layer-group",
-          title: "React Ecosystem & Full Stack",
-          description: "Building modern web apps with React and cross-platform mobile projects with React Native.",
+          title: "Web & Mobile Development",
+          description: "Building web apps with React and Next.js, and mobile apps with React Native, Expo, and Kotlin / Jetpack Compose.",
           tags: [
             { icon: "fab fa-react", label: "React", color: "cyan" },
             { icon: "fab fa-react", label: "React Native", color: "cyan" },
-            { icon: "fab fa-react", label: "React Hooks", color: "cyan" },
+            { icon: "fab fa-react", label: "Next.js", color: "cyan" },
+            { icon: "fab fa-android", label: "Jetpack Compose", color: "green" },
+            { icon: "fab fa-react", label: "Expo", color: "cyan" },
             { icon: "fab fa-node-js", label: "Node.js", color: "green" }
           ]
         },
@@ -350,7 +495,9 @@ const translations = {
           title: "Database",
           tags: [
             { icon: "fas fa-database", label: "MySQL", color: "blue" },
-            { icon: "fas fa-database", label: "PostgreSQL", color: "indigo" }
+            { icon: "fas fa-database", label: "PostgreSQL", color: "indigo" },
+            { icon: "fas fa-database", label: "Supabase", color: "green" },
+            { icon: "fas fa-fire", label: "Firebase", color: "orange" }
           ]
         },
         {
@@ -358,7 +505,7 @@ const translations = {
           title: "AI & API Integration",
           description: "Integrating AI services into projects, turning concepts into production-ready products.",
           tags: [
-            { icon: "fas fa-brain", label: "fal.ai (AI API)", color: "purple" },
+            { icon: "fas fa-brain", label: "Gemini API", color: "green" },
             { icon: "fas fa-exchange-alt", label: "REST API", color: "green" },
             { icon: "fab fa-google", label: "Google APIs", color: "red" }
           ]
@@ -390,7 +537,7 @@ const translations = {
     // Experience
     experience: {
       tag: "Experience",
-      title: "Experience & Projects",
+      title: "Projects & Experience",
       items: [
         {
           icon: "fas fa-qrcode",
@@ -413,29 +560,172 @@ const translations = {
           tech: ["React Native", "AR", "Maps API", "React Hooks"]
         }
       ],
-      projectsHeader: "Open Source Projects",
-      projectsSub: "Featured projects from my GitHub profile",
-      projects: [
-        { href: "https://github.com/BatuhanTNK/GameSkinAI", icon: "fas fa-gamepad", title: "GameSkinAI", desc: "AI-powered game skin/personalization platform (React + Horizon UI)", lang: "JavaScript", langIcon: "fab fa-js" },
-        { href: "https://github.com/BatuhanTNK/time_thief", icon: "fas fa-stopwatch", title: "time_thief (Chronos)", desc: "Backendless, game-based task system: daily spin, streak and achievements", lang: "TypeScript", langIcon: "fab fa-js" },
-        { href: "https://github.com/BatuhanTNK/click_count-", icon: "fas fa-mouse-pointer", title: "click_count", desc: "Counter app with categories, timer, reminders, templates and Android widget", lang: "TypeScript", langIcon: "fab fa-js" },
-        { href: "https://github.com/BatuhanTNK/chatbot_uygulama-main-server", icon: "fas fa-robot", title: "Chatbot App", desc: "Chatbot & satisfaction survey with Supabase + Mistral AI + Gmail integration", lang: "Node.js", langIcon: "fab fa-node-js" }
-      ],
-      archivedHeader: "Other Projects (Archive)",
-      archivedSub: "Early-stage and educational work",
-      archivedProjects: [
-        { href: "https://github.com/BatuhanTNK/VTO_proje_Viro", icon: "fas fa-camera", title: "VTO_proje_Viro", desc: "Virtual Try-On project", lang: "TypeScript", langIcon: "fab fa-js" },
-        { href: "https://github.com/BatuhanTNK", icon: "fas fa-robot", title: "AI_Wep_Interface", desc: "AI-powered web interface project", lang: "TypeScript", langIcon: "fab fa-js" },
-        { href: "https://github.com/BatuhanTNK", icon: "fas fa-map-marked-alt", title: "ArView_Map", desc: "Augmented reality map application", lang: "JavaScript", langIcon: "fab fa-js" },
-        { href: "https://github.com/BatuhanTNK", icon: "fas fa-brain", title: "Yas_Tahmini_Py", desc: "AI-based age prediction project", lang: "Python", langIcon: "fab fa-python" },
-        { href: "https://github.com/BatuhanTNK", icon: "fas fa-blog", title: "Ki-sisel-Blog-Web-Site", desc: "Personal blog website", lang: "HTML/CSS/JS", langIcon: "fab fa-html5" }
-      ]
+        "projectsHeader": "Projects I have built",
+        "projectsSub": "Real screens from web, mobile, and AI projects.",
+        "experienceHeading": "Experience",
+        "imageLabel": "Open screenshot",
+        "codeLabel": "View code",
+        "siteLabel": "Visit website",
+        "screenshotLabel": "Application screenshot",
+        "projects": [
+          {
+            "id": "gameskinai",
+            "title": "GameSkinAI",
+            "kind": "AI-powered web application",
+            "desc": "An AI platform that transforms a photo or character concept into a selected game style. It combines character imagery and prompt generation with conversion history, a prompt library, and a community gallery.",
+            "features": [
+              "Photo and concept-based game-style conversion",
+              "Prompt library, history, and community gallery",
+              "Supabase authentication and data management"
+            ],
+            "tech": [
+              "React",
+              "Vite",
+              "Tailwind CSS",
+              "Supabase",
+              "Gemini"
+            ],
+            "href": "https://github.com/BatuhanTNK/GameSkinAI",
+            "image": "image/projects/gameskinai.jpg",
+            "imageAlt": "GameSkinAI homepage with a character transformation example and prompt preview",
+            "format": "web",
+            "lang": "React · AI",
+            "langIcon": "fab fa-react",
+            "icon": "fas fa-gamepad"
+          },
+          {
+            "id": "click-count",
+            "title": "Click & Count",
+            "kind": "Mobile counter & habit tracker",
+            "desc": "A React Native application combining manual counters, countdown timers, and stopwatches. Categories and groups, targets, reminders, and usage statistics help users track everyday activities.",
+            "features": [
+              "Manual counters, countdowns, and stopwatches",
+              "Categories, groups, goals, and reminders",
+              "Statistics, daily challenges, and achievements"
+            ],
+            "tech": [
+              "React Native",
+              "Expo",
+              "TypeScript",
+              "Zustand"
+            ],
+            "href": "https://github.com/BatuhanTNK/click_count-",
+            "image": "image/projects/click-count.png",
+            "imageAlt": "Click & Count app showing counter statistics, a daily goal, and counter groups",
+            "format": "mobile",
+            "lang": "React Native · Expo",
+            "langIcon": "fab fa-react",
+            "icon": "fas fa-hand-pointer"
+          },
+          {
+            "id": "falyeri",
+            "title": "Falyeri",
+            "kind": "Android · Entertainment & astrology",
+            "desc": "An entertainment-focused Android app built with Kotlin and Jetpack Compose. It brings together tarot, coffee readings, dream interpretations, and horoscopes with Gemini integration, reading history, and AI chat.",
+            "features": [
+              "Tarot, coffee, dream, and horoscope readings",
+              "AI chat and previous readings",
+              "Firebase accounts, a daily card, and notifications"
+            ],
+            "tech": [
+              "Kotlin",
+              "Jetpack Compose",
+              "Firebase",
+              "Gemini",
+              "Room"
+            ],
+            "href": "https://github.com/BatuhanTNK/falyeri",
+            "image": "image/projects/falyeri.png",
+            "imageAlt": "Falyeri Android home screen with a daily tarot card and check-in streak",
+            "format": "mobile",
+            "lang": "Kotlin · Android",
+            "langIcon": "fab fa-android",
+            "icon": "fas fa-star"
+          },
+          {
+            "id": "ilan-asistani",
+            "title": "Listing Assistant",
+            "kind": "AI real estate copy assistant",
+            "desc": "A web application that turns property details into formal, friendly, and social media listing copy. It combines a Next.js interface with Gemini text generation, Supabase accounts, and saved listing history.",
+            "features": [
+              "Three tones of listing copy from property details",
+              "Saved listings and text editing workflow",
+              "Supabase accounts and usage quotas"
+            ],
+            "tech": [
+              "Next.js",
+              "React",
+              "TypeScript",
+              "Supabase",
+              "Gemini",
+              "Tailwind CSS"
+            ],
+            "href": "https://github.com/BatuhanTNK/real-estate-assistant",
+            "image": "image/projects/ilan-asistani.jpg",
+            "imageAlt": "Listing Assistant homepage introducing real estate copy generation in three tones",
+            "format": "web",
+            "lang": "Next.js · Gemini",
+            "langIcon": "fab fa-react",
+            "icon": "fas fa-house"
+          },
+          {
+            "id": "qr-platform",
+            "title": "Dynamic QR Platform",
+            "kind": "Full Stack · QR management",
+            "desc": "A platform for QR design, dynamic redirects, and digital business cards. It brings CSV batch generation, scan analytics, user dashboards, and administration tools together with a React frontend and Node.js API.",
+            "features": [
+              "Custom QR design and dynamic vCards",
+              "CSV batch generation and scan analytics",
+              "User management and an admin dashboard"
+            ],
+            "tech": [
+              "React",
+              "Node.js",
+              "Express",
+              "MySQL",
+              "Sequelize"
+            ],
+            "href": "https://github.com/BatuhanTNK/qr_cODE",
+            "image": "image/projects/qr-platform.jpg",
+            "imageVersion": "header-v2",
+            "imageAlt": "QR Platform homepage with creation, scanner, and account navigation",
+            "format": "web",
+            "lang": "React · Node.js",
+            "langIcon": "fab fa-node-js",
+            "icon": "fas fa-qrcode"
+          },
+          {
+            "id": "nqc",
+            "title": "NQC Bilisim",
+            "kind": "Corporate website",
+            "desc": "A responsive, multi-page website presenting software development services. Service, about, and contact pages include SEO metadata, structured data, and direct contact links.",
+            "features": [
+              "Home, services, about, and contact pages",
+              "Responsive layout, SEO, and structured data",
+              "WhatsApp and email contact flows"
+            ],
+            "tech": [
+              "HTML",
+              "CSS",
+              "JavaScript",
+              "Bootstrap"
+            ],
+            "href": "https://github.com/BatuhanTNK/NQC",
+            "site": "https://nqcbilisim.com.tr",
+            "image": "image/projects/nqc.jpg",
+            "imageAlt": "NQC Bilisim homepage presenting web, mobile, and software services",
+            "format": "web",
+            "lang": "HTML · CSS · JavaScript",
+            "langIcon": "fab fa-html5",
+            "icon": "fas fa-globe"
+          }
+        ]
     },
 
     // CTA
     cta: {
-      title: "Planning a Project?",
-      description: "I'm ready to turn your ideas into reality, build AI-powered solutions with React for web or mobile. Let's create innovative solutions with modern technologies.",
+      title: "What are you building next?",
+      description: "Have a web, mobile, or AI integration project in mind? Let's talk about the details.",
       button: "Get In Touch"
     },
 
@@ -477,8 +767,8 @@ const translations = {
       formMessage: "Your Message",
       formButton: "Send Message",
       formSending: "Sending...",
-      formSuccess: "Message Sent!",
-      formError: "Error Occurred!"
+      formSuccess: "Your message was sent. Thanks for getting in touch.",
+      formError: "Could not send your message. Please try again or contact me by email."
     },
 
     // Footer
