@@ -22,7 +22,7 @@
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="stylesheet" href="style.css?v=8">
 </head>
 
 <body>
@@ -67,6 +67,7 @@
                 </div>
                 <p class="footer-text" id="footerText">Tasarım & Geliştirme — Batuhan Tonk © 2026</p>
                 <div class="footer-links">
+                    <button type="button" class="privacy-preferences" id="analyticsPreferences">Çerez tercihleri</button>
                     <a href="https://linkedin.com/in/batuhan-tonk-3b520a315" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
                             class="fab fa-linkedin-in"></i></a>
                     <a href="https://github.com/BatuhanTNK" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
@@ -76,8 +77,22 @@
         </div>
     </footer>
 
+    <section class="analytics-consent" id="analyticsConsent" aria-labelledby="analyticsTitle" hidden>
+        <div class="analytics-copy">
+            <h2 id="analyticsTitle">Ziyaret istatistikleri</h2>
+            <p id="analyticsDescription"></p>
+            <a id="analyticsDetails" href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Google’ın verileri nasıl kullandığı</a>
+            <p class="analytics-note" id="analyticsNote"></p>
+        </div>
+        <div class="analytics-actions">
+            <button type="button" id="analyticsReject">Reddet</button>
+            <button type="button" id="analyticsAccept">İzin ver</button>
+        </div>
+    </section>
+
+    <script src="analytics.js?v=1"></script>
     <script src="i18n.js?v=7"></script>
-    <script src="script.js?v=7"></script>
+    <script src="script.js?v=8"></script>
 </body>
 
 </html>

@@ -212,6 +212,12 @@ function renderApp() {
 
   // Init view-specific JS
   if (currentRouteIndex === 5) initContactForm(t);
+
+  window.portfolioAnalytics?.pageView(
+    currentLang,
+    getRouteSlug(currentLang, currentRouteIndex),
+    `${t.nav[getRouteSlug(currentLang, currentRouteIndex)]} — Batuhan Tonk`
+  );
 }
 
 // ========================
@@ -569,6 +575,7 @@ function initContactForm(t) {
         btn.style.opacity = "1";
         status.textContent = c.formSuccess;
         this.reset();
+        window.portfolioAnalytics?.contactSubmitted();
       } else {
         throw new Error("Form error");
       }
