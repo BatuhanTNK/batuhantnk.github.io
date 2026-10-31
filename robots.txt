@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://batuhantnk.github.io/sitemap.xml

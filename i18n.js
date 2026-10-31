@@ -6,7 +6,7 @@ const translations = {
     otherLangLabel: "EN",
     htmlLang: "tr",
     pageTitle: "Batuhan Tonk — Full Stack & Mobil Uygulama Geliştirici",
-    metaDescription: "Batuhan Tonk'un kişisel portfolyo sitesi. Full Stack Yazılım Geliştirici, React, React Native, JavaScript, TypeScript ve modern web teknolojileri uzmanı.",
+    metaDescription: "Batuhan Tonk kişisel portfolyosu. React, React Native, Next.js ve AI entegrasyonları ile web ve mobil uygulama geliştirici.",
 
     // Route mappings
     routes: {
@@ -395,7 +395,7 @@ const translations = {
     otherLangLabel: "TR",
     htmlLang: "en",
     pageTitle: "Batuhan Tonk — Full Stack & Mobile App Developer",
-    metaDescription: "Batuhan Tonk's personal portfolio. Full Stack Developer specializing in React, React Native, JavaScript, TypeScript, and modern web technologies.",
+    metaDescription: "Batuhan Tonk's portfolio. Full Stack & Mobile Developer building web, mobile, and AI apps with React, React Native, and Next.js.",
 
     // Route mappings
     routes: {

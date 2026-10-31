@@ -183,8 +183,10 @@ function renderApp() {
   hamburger.setAttribute("aria-label", currentLang === "tr" ? "Menüyü aç / kapat" : "Toggle menu");
   setTheme(html.dataset.theme);
 
-  // Update page title
-  document.title = t.pageTitle;
+  // Update page title & logo link
+  const activeSlug = getRouteSlug(currentLang, currentRouteIndex);
+  document.title = currentRouteIndex === 0 ? t.pageTitle : `${t.nav[activeSlug]} — Batuhan Tonk`;
+  document.getElementById("navLogo").setAttribute("href", `#/${currentLang}/${getRouteSlug(currentLang, 0)}`);
 
   // Update meta description
   const metaDesc = document.querySelector('meta[name="description"]');
