@@ -9,6 +9,7 @@ function setup({ hostname = "batuhantnk.github.io", saved = null, storageFails =
   const listeners = {};
   const scripts = [];
   const clearedCookies = [];
+  const beacons = [];
   const storage = new Map(saved ? [["portfolio-analytics-consent-v1", saved]] : []);
   function element(id) {
     if (!elements.has(id)) elements.set(id, {
@@ -31,7 +32,13 @@ function setup({ hostname = "batuhantnk.github.io", saved = null, storageFails =
   };
   const window = { addEventListener(name, handler) { listeners[name] = handler; } };
   const context = vm.createContext({
-    document, window, URL, Date,
+    document, window, URL, Date, Intl,
+    navigator: {
+      userAgent: "TestBrowser/1.0",
+      language: "tr-TR",
+      sendBeacon(url, payload) { beacons.push({ url, payload: JSON.parse(payload) }); return true; }
+    },
+    screen: { width: 1440, height: 900 },
     location: { hostname, origin: `https://${hostname}`, pathname: "/", href: `https://${hostname}/?email=private#/tr/anasayfa` },
     localStorage: {
       getItem(key) { if (storageFails) throw new Error("blocked"); return storage.get(key) || null; },
@@ -40,7 +47,7 @@ function setup({ hostname = "batuhantnk.github.io", saved = null, storageFails =
   });
   vm.runInContext(source, context);
   return {
-    window, document, element, scripts, clearedCookies, listeners,
+    window, document, element, scripts, clearedCookies, listeners, beacons,
     commands: () => Array.from(window.dataLayer || [], (item) => Array.from(item)),
     events: () => Array.from(window.dataLayer || [], (item) => Array.from(item)).filter((item) => item[0] === "event"),
     page(slug = "anasayfa") { window.portfolioAnalytics.pageView("tr", slug, `${slug} — Batuhan Tonk`); },
@@ -48,19 +55,17 @@ function setup({ hostname = "batuhantnk.github.io", saved = null, storageFails =
   };
 }
 
-test("no Google script or event before permission; rejected visits are not replayed", () => {
+test("analytics is active by default on production and banner stays hidden until preferences opened", () => {
   const app = setup();
   app.page();
   app.page("iletisim");
   app.window.portfolioAnalytics.contactSubmitted();
   app.clickLink("https://github.com/BatuhanTNK");
-  assert.equal(app.scripts.length, 0);
-  assert.equal(app.events().length, 0);
-  assert.equal(app.element("analyticsConsent").hidden, false);
-  app.element("analyticsAccept").click();
   assert.equal(app.scripts.length, 1);
-  assert.equal(app.events().length, 1);
-  assert.equal(app.events()[0][2].page_path, "/tr/iletisim");
+  assert.equal(app.events().length, 4);
+  assert.equal(app.element("analyticsConsent").hidden, true);
+  app.element("analyticsPreferences").click();
+  assert.equal(app.element("analyticsConsent").hidden, false);
 });
 
 test("one view per route, including language changes; sanitized URLs and referrers", () => {
@@ -132,4 +137,21 @@ test("saved refusal, unavailable storage and cross-tab revocation are handled", 
   blocked.listeners.storage({ key: "portfolio-analytics-consent-v1", newValue: "denied" });
   blocked.page("iletisim");
   assert.equal(blocked.events().length, 1);
+});
+
+test("visitor session report sends once on pagehide with pages, durations, actions and device info", () => {
+  const app = setup();
+  app.page("anasayfa");
+  app.page("projeler");
+  app.clickLink("https://github.com/BatuhanTNK/GameSkinAI");
+  app.listeners.pagehide();
+  app.listeners.pagehide();
+  assert.equal(app.beacons.length, 1);
+  const report = app.beacons[0].payload;
+  assert.equal(report.domain, "batuhantnk.github.io");
+  assert.equal(report.pages.length, 2);
+  assert.equal(report.pages[0].path, "/tr/anasayfa");
+  assert.equal(report.pages[1].path, "/tr/projeler");
+  assert.equal(report.actions.length, 1);
+  assert.equal(report.screen, "1440x900");
 });
