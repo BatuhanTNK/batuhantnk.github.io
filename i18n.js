@@ -180,6 +180,34 @@ const translations = {
         "screenshotLabel": "Uygulama ekranı",
         "projects": [
           {
+            "id": "tonkjet",
+            "title": "TonkJet",
+            "kind": "4K Scrollytelling & 3D WebGL deneyimi",
+            "desc": "Lüks özel jet kiralama markası için geliştirilen sinematik, kaydırma odaklı web deneyimi. 4K şeffaf kabin penceresi zoom geçişi, Gulfstream 650ER dış görünümden kabin içi plana CSS maske dönüşümü, etkileşimli Three.js 3D uçuş ağı küresi ve rezervasyon çekmecesini tek akışta birleştirir.",
+            "features": [
+              "4K katmanlı kabin penceresi zoom-through ve dinamik tema değiştiren üst menü",
+              "CSS maske süpürmesi ile uçak dış gövdeden kabin içi plana dönüşüm ve teknik özellikler",
+              "Three.js & TopoJSON ile etkileşimli, sürüklenebilir 3D WebGL dünya küresi ve canlı uçuş yayları",
+              "Etkileşimli avantajlar akordeonu, canlı saat telemetrisi, paralaks biniş kartı ve charter talep çekmecesi"
+            ],
+            "tech": [
+              "Next.js",
+              "TypeScript",
+              "Tailwind CSS",
+              "Framer Motion",
+              "Three.js",
+              "Lenis"
+            ],
+            "href": "https://github.com/BatuhanTNK/tonkjet",
+            "site": "https://tonkjet.netlify.app",
+            "image": "image/projects/tonkjet.jpg",
+            "imageAlt": "TonkJet ana ekranı; 4K lüks jet kabin penceresinden gökyüzü görünümü ve rezervasyon butonu",
+            "format": "web",
+            "lang": "Next.js · Three.js",
+            "langIcon": "fab fa-react",
+            "icon": "fas fa-plane"
+          },
+          {
             "id": "gameskinai",
             "title": "GameSkinAI",
             "kind": "AI destekli web uygulaması",
@@ -568,6 +596,34 @@ const translations = {
         "siteLabel": "Visit website",
         "screenshotLabel": "Application screenshot",
         "projects": [
+          {
+            "id": "tonkjet",
+            "title": "TonkJet",
+            "kind": "4K Scrollytelling & 3D WebGL experience",
+            "desc": "A cinematic, scroll-driven luxury private jet charter web experience. Combines a 4K layered transparent cabin window zoom-through, a CSS mask-driven Gulfstream 650ER exterior-to-interior floorplan morph, an interactive Three.js 3D global flight network globe, and a bottom-docked charter booking drawer.",
+            "features": [
+              "4K layered oval cabin window zoom-through with dynamic theme-inverting navigation",
+              "Scroll-driven CSS mask morph from aircraft exterior to interior floorplan with technical specs",
+              "Interactive drag-to-rotate Three.js & TopoJSON 3D WebGL globe with animated great-circle flight arcs",
+              "Editorial advantages accordion, live telemetry bar, parallax boarding pass card, and charter request drawer"
+            ],
+            "tech": [
+              "Next.js",
+              "TypeScript",
+              "Tailwind CSS",
+              "Framer Motion",
+              "Three.js",
+              "Lenis"
+            ],
+            "href": "https://github.com/BatuhanTNK/tonkjet",
+            "site": "https://tonkjet.netlify.app",
+            "image": "image/projects/tonkjet.jpg",
+            "imageAlt": "TonkJet homepage featuring a 4K luxury private jet cabin window framing sunlit clouds and a charter booking CTA",
+            "format": "web",
+            "lang": "Next.js · Three.js",
+            "langIcon": "fab fa-react",
+            "icon": "fas fa-plane"
+          },
           {
             "id": "gameskinai",
             "title": "GameSkinAI",
